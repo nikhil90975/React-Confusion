@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
             return (
                 <Card>
-                    <Link to= {`/menu/${dish.id}`}>
+                    <Link to= {`/React-Confusion/menu/${dish.id}`}>
                     <CardImg width = "100%" src={dish.image} alt={dish.name} />
                     <CardImgOverlay>
                         <CardTitle>{dish.name}</CardTitle>

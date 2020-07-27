@@ -6,7 +6,7 @@ function Contact(props) {
         <div className="container">
             <div className="row">
                         <Breadcrumb>
-                            <BreadcrumbItem><Link to='/home'>Home</Link></BreadcrumbItem>
+                            <BreadcrumbItem><Link to='/React-Confusion/home'>Home</Link></BreadcrumbItem>
                             <BreadcrumbItem active>Contact Us</BreadcrumbItem>
                         </Breadcrumb>
                         <div className="col-12">
