@@ -56,12 +56,12 @@ class Main extends Component {
       <div >
         <Header />
           <Switch>
-            <Route path = "React-Confusion/home" component = {HomePage} />
-            <Route exact path = "React-Confusion/menu" component = {() => <Menu dishes = {this.state.dishes } />} />
-            <Route path ="React-Confusion/menu/:dishId" component={DishWithId} />
-            <Route exact path = 'React-Confusion/contactus' component={Contact} />
-            <Route exact path = "React-Confusion/aboutus" component = {AbouT} />
-            < Redirect to = "React-Confusion/home" />
+            <Route path = "/React-Confusion/home" component = {HomePage} />
+            <Route exact path = "/React-Confusion/menu" component = {() => <Menu dishes = {this.state.dishes } />} />
+            <Route path ="/React-Confusion/menu/:dishId" component={DishWithId} />
+            <Route exact path = '/React-Confusion/contactus' component={Contact} />
+            <Route exact path = "/React-Confusion/aboutus" component = {AbouT} />
+            < Redirect to = "/React-Confusion/home" />
           </Switch>
         <Footer />
       </div>
