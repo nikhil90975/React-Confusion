@@ -9,6 +9,7 @@ import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
 import Contact from './contactComponent';
+import About from './about';
 import { Switch, Route,Redirect } from 'react-router-dom';
 
 class Main extends Component {
@@ -39,7 +40,11 @@ class Main extends Component {
           
           );
         }
-    
+    const AbouT = () => {
+      return (
+        <About leaders = {this.state.leaders} />
+      )
+    }
     const DishWithId = ({match}) =>{
         return (
           <DishDetail dish={this.state.dishes.filter((dish) => dish.id === parseInt(match.params.dishId,10))[0]} 
@@ -51,11 +56,12 @@ class Main extends Component {
       <div >
         <Header />
           <Switch>
-            <Route path = "/home" component = {HomePage} />
-            <Route exact path = "/menu" component = {() => <Menu dishes = {this.state.dishes } />} />
-            <Route path ="/menu/:dishId" component={DishWithId} />
-            <Route exact path = '/contactus' component={Contact} />
-            < Redirect to = "/home" />
+            <Route path = "React-Confusion/home" component = {HomePage} />
+            <Route exact path = "React-Confusion/menu" component = {() => <Menu dishes = {this.state.dishes } />} />
+            <Route path ="React-Confusion/menu/:dishId" component={DishWithId} />
+            <Route exact path = 'React-Confusion/contactus' component={Contact} />
+            <Route exact path = "React-Confusion/aboutus" component = {AbouT} />
+            < Redirect to = "React-Confusion/home" />
           </Switch>
         <Footer />
       </div>
